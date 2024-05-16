@@ -1,1 +1,5 @@
+# python packages to install, one per line
+torch
+numpy
+matplotlib
 jupyterlab

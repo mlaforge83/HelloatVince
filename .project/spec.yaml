@@ -1,4 +1,5 @@
 specVersion: v2
+specMinorVersion: 2
 meta:
   name: HelloatVince
   image: project-helloatvince
@@ -44,6 +45,8 @@ environment:
         -o /dev/null -s -w ''%{http_code}'' --config -) == ''200'' ]'
       stop_command: jupyter lab stop 8888
       user_msg: ""
+      logfile_path: ""
+      timeout_seconds: 60
       icon_url: ""
       webapp_options:
         autolaunch: true
@@ -87,7 +90,7 @@ execution:
   apps: []
   resources:
     gpu:
-      requested: 0
+      requested: 1
     sharedMemoryMB: 0
   secrets: []
   mounts:
